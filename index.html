@@ -27,6 +27,65 @@
     .wrap{max-width:var(--max-width);margin:48px auto;padding:24px}
 
     /* NAV */
+/* Make site responsive */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+section {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 15px;
+    }
+    .profile-pic {
+        width: 140px;
+    }
+    section {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    p, li {
+        font-size: 1rem;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+    .profile-pic {
+        width: 120px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    p, li {
+        font-size: 0.95rem;
+    }
+}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .logo{display:flex;align-items:center;gap:12px}
     .logo .mark{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;font-weight:700;background:var(--accent-2);color:white;box-shadow:var(--shadow)}
