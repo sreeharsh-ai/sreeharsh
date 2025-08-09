@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sreeharsh E K — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7fafc; /* light */
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent-1: linear-gradient(135deg,#7dd3fc22 0%, #a78bfa22 100%);
+      --accent-2: linear-gradient(135deg,#60a5fa 0%, #7c3aed 100%);
+      --glass: rgba(255,255,255,0.6);
+      --radius:16px;
+      --shadow: 0 8px 30px rgba(15,23,42,0.08);
+      --max-width:1100px;
+      color-scheme: light;
+      color: #0f172a;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);}
+    .wrap{max-width:var(--max-width);margin:48px auto;padding:24px}
+
+    /* NAV */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:48px;height:48px;border-radius:10px;display:grid;place-items:center;font-weight:700;background:var(--accent-2);color:white;box-shadow:var(--shadow)}
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:36px}
+    .hero-card{background:var(--card);border-radius:20px;padding:36px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .hero h1{font-size:36px;margin:0 0 8px}
+    .tag{color:var(--muted);margin-bottom:16px;font-weight:600}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;border:0;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,#2563eb,#7c3aed);color:white;box-shadow: 0 6px 18px rgba(99,102,241,0.25)}
+    .btn-ghost{background:transparent;border:1px solid rgba(15,23,42,0.06);color:var(--muted)}
+
+    .profile{display:flex;flex-direction:column;gap:12px;align-items:center}
+    .avatar{width:220px;height:220px;border-radius:18px;background:linear-gradient(135deg,#e9d5ff,#c7f9ff);display:grid;place-items:center;font-weight:800;color:#052e5a;font-size:26px;box-shadow:var(--shadow)}
+    .meta{color:var(--muted);font-weight:600}
+
+    /* SECTIONS */
+    section{margin-top:28px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:var(--shadow)}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .pill{padding:8px 12px;border-radius:999px;background:linear-gradient(90deg,#f3f4f6,#fff);border:1px solid rgba(15,23,42,0.03);font-weight:600}
+
+    /* CERTIFICATE PREVIEW */
+    .cert{display:grid;grid-template-columns:1fr 220px;gap:18px;align-items:center}
+    .cert-preview{min-height:180px;border-radius:12px;border:1px dashed rgba(15,23,42,0.06);display:grid;place-items:center;background:var(--accent-1)}
+    .cert-preview img{max-width:100%;border-radius:10px}
+    .cert-actions{display:flex;gap:10px}
+
+    footer{margin-top:36px;padding:18px;border-radius:12px;background:var(--card);box-shadow:var(--shadow);display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .cert{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .profile{flex-direction:row}
+      .avatar{width:120px;height:120px}
+    }
+
+    /* subtle entrance */
+    .fade-up{opacity:0;transform:translateY(10px);animation:fadeUp .6s ease forwards}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    a.social{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--muted);font-weight:700}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="fade-up">
+      <div class="logo">
+        <div class="mark">SE</div>
+        <div>
+          <div style="font-weight:800">Sreeharsh E K</div>
+          <div style="font-size:12px;color:var(--muted)">Aspiring Data Analyst &amp; Creative Thinker</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#cert">Certificate</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="hero-card fade-up">
+          <h1>Hi — I’m <span style="color:#7c3aed">Sreeharsh E K</span></h1>
+          <div class="tag">Aspiring Data Analyst &amp; Creative Thinker — Thalassery, Kannur</div>
+          <p class="muted">I am a 2nd-year B.Tech (CSE) student at Vimal Jyothi Engineering College (2024–2028). Currently completing the Google Data Analytics Professional Certificate while building projects that merge analytical rigor with creative design. I work with Python, Java, C, web development basics, and data analytics tools. I love solving problems, exploring new technologies, and turning ideas into tangible outcomes.</p>
+
+          <div class="cta">
+            <a class="btn btn-primary" href="#contact">Hire / Contact</a>
+            <a class="btn btn-ghost" href="https://github.com/sreeharsh-ai" target="_blank" rel="noopener">View Code</a>
+          </div>
+
+          <div style="margin-top:20px;color:var(--muted);font-size:14px">Location • Thalassery, Kannur, Kerala, India</div>
+        </div>
+
+        <aside class="profile fade-up">
+          <div class="avatar">SREE<br>HARSH</div>
+          <div style="padding-left:14px">
+            <div style="font-weight:800">Student • Aspiring Data Analyst</div>
+            <div class="meta">Vimal Jyothi Engineering College, Chemperi • 2024–2028</div>
+            <div style="margin-top:12px" class="muted">Languages • English, Malayalam</div>
+            <div style="margin-top:10px" class="muted">Contact • <a href="mailto:sreeharshek0@gmail.com">sreeharshek0@gmail.com</a></div>
+          </div>
+        </aside>
+      </div>
+
+      <section id="skills" class="fade-up">
+        <div class="card">
+          <h3>Skills & Tools</h3>
+          <p class="muted">Technical skills, languages and tools I use frequently.</p>
+          <div style="margin-top:12px" class="skills">
+            <div class="pill">Python</div>
+            <div class="pill">Java</div>
+            <div class="pill">C</div>
+            <div class="pill">Web Development (HTML/CSS/JS)</div>
+            <div class="pill">Data Analytics</div>
+            <div class="pill">DSA</div>
+            <div class="pill">SQL</div>
+            <div class="pill">Spreadsheets</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="fade-up" style="margin-top:18px;">
+        <div class="grid-3">
+          <div class="card">
+            <h4>Education</h4>
+            <div class="muted">B.Tech — Computer Science Engineering (2024–2028)</div>
+            <div style="font-weight:700;margin-top:8px">Vimal Jyothi Engineering College, Chemperi</div>
+          </div>
+
+          <div class="card">
+            <h4>Current Focus</h4>
+            <div class="muted">Google Data Analytics Professional Certificate (Coursera) — In Progress</div>
+            <div style="margin-top:8px">Building projects, improving SQL &amp; spreadsheets skills, and learning data visualization techniques.</div>
+          </div>
+
+          <div class="card">
+            <h4>Interests</h4>
+            <div class="muted">Creative problem solving, product-thinking, leadership, communication.</div>
+            <div style="margin-top:8px">Always exploring new technologies and creative workflows.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cert" class="fade-up">
+        <h3>Certificate Preview</h3>
+        <div class="cert">
+          <div>
+            <p class="muted">If you place your certificate file in the repository as <code>assets/Coursera-73SYIIEM2EXR.pdf</code> and (optionally) an image thumbnail <code>assets/Coursera-73SYIIEM2EXR.png</code>, this area will show the image preview. If the image is unavailable the PDF will be embedded.</p>
+            <div style="margin-top:12px" class="cert-actions">
+              <a class="btn btn-primary" id="open-cert" href="assets/Coursera-73SYIIEM2EXR.pdf" target="_blank" rel="noopener">Open Certificate</a>
+              <a class="btn btn-ghost" id="download-cert" href="assets/Coursera-73SYIIEM2EXR.pdf" download>Download PDF</a>
+            </div>
+          </div>
+          <div class="cert-preview" id="certPreview" aria-live="polite">
+            <div style="text-align:center;color:var(--muted)">Loading preview…</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="fade-up">
+        <h3>Projects</h3>
+        <div class="card muted">Currently building — projects will appear here. Recommended project ideas: a Data Analytics case study (CSV -> cleaning -> visualization), a small web app, and algorithmic problem solutions. Link your GitHub repo to show code and live demos.</div>
+      </section>
+
+      <section id="contact" class="fade-up">
+        <h3>Contact</h3>
+        <div class="card">
+          <p class="muted">Want to collaborate or see my work? Use the contact form or email directly.</p>
+          <form id="contactForm" onsubmit="sendMail(event)" style="margin-top:12px;display:flex;flex-direction:column;gap:10px;max-width:560px">
+            <input required name="name" placeholder="Your name" style="padding:12px;border-radius:10px;border:1px solid rgba(15,23,42,0.06)" />
+            <input required name="email" placeholder="Your email" style="padding:12px;border-radius:10px;border:1px solid rgba(15,23,42,0.06)" />
+            <textarea required name="message" placeholder="Message" rows="4" style="padding:12px;border-radius:10px;border:1px solid rgba(15,23,42,0.06)"></textarea>
+            <div style="display:flex;gap:10px">
+              <button class="btn btn-primary" type="submit">Send Email</button>
+              <a class="btn btn-ghost" href="mailto:sreeharshek0@gmail.com">Or email directly</a>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="fade-up">
+      <div>
+        <div style="font-weight:800">Sreeharsh E K</div>
+        <div class="muted">Aspiring Data Analyst • Thalassery, Kannur</div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <a class="social" href="https://www.linkedin.com/in/sreeharsh-e-k" target="_blank">LinkedIn</a>
+        <a class="social" href="https://github.com/sreeharsh-ai" target="_blank">GitHub</a>
+        <a class="social" href="https://www.instagram.com/sreeharsh_25/" target="_blank">Instagram</a>
+        <a class="social" href="https://x.com/Sreeharsh_" target="_blank">X</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded',()=>{
+      // entrance animations
+      document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.animationDelay=(i*120)+'ms'});
+
+      // Certificate preview logic: prefer an image thumbnail if present, otherwise embed the PDF.
+      const preview = document.getElementById('certPreview');
+      const pdfPath = 'assets/Coursera-73SYIIEM2EXR.pdf';
+      const imgPath = 'assets/Coursera-73SYIIEM2EXR.png';
+
+      // try loading image first
+      fetch(imgPath,{method:'HEAD'}).then(r=>{
+        if(r.ok){
+          const img = document.createElement('img');
+          img.alt='Certificate preview';
+          img.src=imgPath;
+          preview.innerHTML='';
+          preview.appendChild(img);
+        } else {
+          // fallback: embed PDF using <object>
+          const obj = document.createElement('object');
+          obj.data = pdfPath;
+          obj.type = 'application/pdf';
+          obj.width = '100%';
+          obj.height = '220';
+          obj.ariaLabel = 'Certificate PDF preview';
+          obj.innerHTML = `<div style="padding:16px;color:var(--muted)">Preview not available — <a href="${pdfPath}" target="_blank">open certificate</a></div>`;
+          preview.innerHTML='';
+          preview.appendChild(obj);
+        }
+      }).catch(err=>{
+        // network or CORS issue: show fallback link
+        preview.innerHTML = `<div style="text-align:center;color:var(--muted)">Preview not available. <a href="${pdfPath}" target="_blank">Open certificate</a></div>`;
+      });
+
+    });
+
+    function sendMail(e){
+      e.preventDefault();
+      const f = e.target;
+      const name = encodeURIComponent(f.name.value);
+      const email = encodeURIComponent(f.email.value);
+      const message = encodeURIComponent(f.message.value + "\n\nFrom: " + f.name.value + " <" + f.email.value + ">");
+      const subject = encodeURIComponent('Portfolio contact from ' + f.name.value);
+      const mailto = `mailto:sreeharshek0@gmail.com?subject=${subject}&body=${message}`;
+      // open user's mail client with prefilled content
+      window.location.href = mailto;
+    }
+  </script>
+
+  <!--
+    Deployment notes:
+    1) Place this file as index.html in your repository root or docs/ (for GitHub Pages).
+    2) Add your certificate PDF at assets/Coursera-73SYIIEM2EXR.pdf. To show an image preview, add assets/Coursera-73SYIIEM2EXR.png (recommended: 1200x800 px).
+    3) Replace avatar with a professional photo: update the .avatar element to use an <img> tag or set background-image.
+    4) For a contact form that actually sends emails without opening mail client, connect to a serverless form provider (Netlify Forms, Formspree) and replace the form action accordingly.
+  -->
+</body>
+</html>
